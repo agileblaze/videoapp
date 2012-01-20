@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @video.title %>
+</p>
+
+<p>
+  <b>Embed code:</b>
+  <%#= sanitize @video.embed_code, :tags => ['iframe'] %>
+  <%= sanitize_video_code(@video)%>
+</p>
+
+<%= render 'comment/show'%>
+<%= render 'comment/add',:id=>@video.id %>
+
+
+
+<%= link_to 'Edit', edit_video_path(@video) %> |
+<%= link_to 'Back', videos_path %>

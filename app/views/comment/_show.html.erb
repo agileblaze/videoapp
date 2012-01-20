@@ -1,0 +1,4 @@
+<h3>Comments(<%= @comments.count %>)</h3>
+<% @comments.each do |comment|%>
+ <%= comment.name %><br></br>
+<% end %>

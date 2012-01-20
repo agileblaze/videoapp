@@ -1,0 +1,12 @@
+<h3>Add comment</h3>
+<%= form_for :comment,:url=>{:controller=>'comment',:action=>"add",:id=>params[:id]} do |f| %>
+   <div class="field">
+    <b><%= f.label :comment %></b><br />
+    <%= f.text_area :name %>
+  </div>
+    <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
+<%= params[:id]%>
